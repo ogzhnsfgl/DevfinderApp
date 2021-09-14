@@ -1,6 +1,6 @@
 # Introduction
 
-![image info](./assets/banner_devfinder.png)
+![image info](./assets/banner_devfinder.jpg)
 
 Devfinder is a search app created with React and pure CSS(SASS) for Github Users. All data provides by Github Users API.
 
