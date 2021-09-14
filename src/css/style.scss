@@ -333,3 +333,7 @@ input::placeholder {
     color: $text-active-light;
   }
 }
+
+a:hover {
+  color: darken($text-active, 50%);
+}
