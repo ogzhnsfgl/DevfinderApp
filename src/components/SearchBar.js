@@ -20,6 +20,14 @@ const SearchBar = () => {
       });
   };
 
+  useEffect(() => {
+    fetch(`https://api.github.com/users/Ogzhnsfgl`)
+      .then((response) => response.json())
+      .then((user) => {
+        setUserData(user);
+      });
+  }, []);
+
   const themeSwitcher = () => {
     setTheme(!theme);
   };

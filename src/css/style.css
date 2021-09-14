@@ -110,6 +110,11 @@ input {
   border-radius: 0;
 }
 
+a {
+  text-decoration: none;
+  color: unset;
+}
+
 :root {
   font-size: 16px;
   width: 100%;
@@ -431,9 +436,10 @@ input::placeholder {
   width: 150px;
   height: 150px;
   border-radius: 100%;
+  border: 2px solid #0279f7;
   position: absolute;
-  top: 45px;
-  left: 45px;
+  top: 15px;
+  left: 25px;
 }
 
 @media (max-width: 992px) {

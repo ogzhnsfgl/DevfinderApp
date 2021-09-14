@@ -19,10 +19,22 @@ const UserCard = () => {
             <div className={`row first-row ${theme ? "dark" : "light"}`}>
               <div>
                 <p className={`font-bg ${theme ? "dark" : "light"}`}>
-                  {userData.name}
+                  <a
+                    href={`${userData.html_url}`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {userData.name}
+                  </a>
                 </p>
                 <p className={`nick ${theme ? "dark" : "light"}`}>
-                  @{userData.login}
+                  <a
+                    href={`${userData.html_url}`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    @{userData.login}
+                  </a>
                 </p>
               </div>
               <p className={`text-passive ${theme ? "dark" : "light"}`}>
@@ -40,7 +52,13 @@ const UserCard = () => {
                   Repos
                 </p>
                 <p className={`font-bg ${theme ? "dark" : "light"}`}>
-                  {userData.public_repos}
+                  <a
+                    href={`${userData.html_url}?tab=repositories`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {userData.public_repos}
+                  </a>
                 </p>
               </div>
               <div>
@@ -74,18 +92,34 @@ const UserCard = () => {
                   userData.twitter_username ? "text-active" : "text-passive"
                 }  ${theme ? "dark" : "light"}`}
               >
-                <i className={`fab fa-twitter`}></i>
-                {userData.twitter_username
-                  ? userData.twitter_username
-                  : "Not available"}
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href={`${
+                    userData.twitter_username
+                      ? `http://twitter.com/${userData.twitter_username}`
+                      : "#"
+                  }`}
+                >
+                  <i className={`fab fa-twitter`}></i>
+                  {userData.twitter_username
+                    ? userData.twitter_username
+                    : "Not available"}
+                </a>
               </p>
               <p
                 className={` ${
                   userData.blog ? "text-active" : "text-passive"
                 }  ${theme ? "dark" : "light"}`}
               >
-                <i className={`fas fa-link `}></i>
-                {userData.blog ? userData.blog : "Not available"}
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href={`${userData.blog ? userData.blog : "#"}`}
+                >
+                  <i className={`fas fa-link `}></i>
+                  {userData.blog ? userData.blog : "Not available"}
+                </a>
               </p>
               <p
                 className={` ${

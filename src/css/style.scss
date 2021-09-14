@@ -196,9 +196,10 @@ input::placeholder {
       width: 150px;
       height: 150px;
       border-radius: 100%;
+      border: 2px solid $light-blue;
       position: absolute;
-      top: 45px;
-      left: 45px;
+      top: 15px;
+      left: 25px;
       @include media(large) {
         position: relative;
         border-radius: 75%;
