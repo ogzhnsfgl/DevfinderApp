@@ -6,8 +6,6 @@ const UserCard = () => {
   const { userData } = useUser();
   const { theme } = useTheme();
 
-  console.log(userData);
-
   return (
     <div className={`card-container ${theme ? "dark" : "light"}`}>
       {userData.name && (

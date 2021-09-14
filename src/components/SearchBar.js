@@ -3,7 +3,7 @@ import { useTheme } from "../context/themeContext";
 import { useUser } from "../context/userDataContext";
 
 const SearchBar = () => {
-  const { setUserData, userData } = useUser();
+  const { setUserData } = useUser();
   const { setTheme, theme } = useTheme();
 
   const [input, setInput] = useState("");
@@ -26,7 +26,7 @@ const SearchBar = () => {
       .then((user) => {
         setUserData(user);
       });
-  }, []);
+  }, [setUserData]);
 
   const themeSwitcher = () => {
     setTheme(!theme);
@@ -52,6 +52,7 @@ const SearchBar = () => {
           placeholder="Search GitHub username..."
           value={input}
           onChange={(e) => onChangeHandler(e)}
+          onKeyDown={(e) => (e.key === "Enter" ? handleOnClick() : null)}
         />
         <button
           className={`${theme ? "dark" : "light"}`}
